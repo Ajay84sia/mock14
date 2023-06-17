@@ -6,7 +6,7 @@ const auth = (req, res, next) => {
         try {
             const verifyToken = jwt.verify(token, "mock14");
             if (verifyToken) {
-                req.body.Useremail = verifyToken.Useremail;
+                req.body.creator = verifyToken.creator;
                 next();
 
             }else{
